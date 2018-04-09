@@ -1,0 +1,36 @@
+$red: red;
+$border-gray: #ccc;
+$grey-lt: #ececec;
+
+.tile-wrapper{
+    padding: 3px;
+}
+.pp-tile{
+    padding: 20px;
+    border-radius: 4px;
+    min-height: 110px;
+    i.tile-icon{
+        position: relative;
+        bottom: -3px;
+        font-size: 30px;
+    }
+}
+
+.amount{
+    font-weight: 700;
+    color: $red;
+}
+
+.pp-tile-type-{background : $border-gray}
+
+.tile-amount {
+    background: white;
+    padding:5px;
+    border: solid 1px white;
+    border-radius: 4px;
+    margin: 0 3px;
+}
+
+.border{
+    border-right: $border-gray solid 1px;
+}

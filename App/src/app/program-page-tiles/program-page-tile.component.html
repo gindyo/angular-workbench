@@ -1,0 +1,26 @@
+    <div class='tile-wrapper'>
+        <div class="pp-tile pp-tile-type-" >
+            <div class="row ">
+                <i class="fa fa-{{tile.iconName || 'exclamation-circle'}} tile-icon col-md-2"></i>
+                <div class="title col-md-10">
+                    <span [ngStyle]="{'font-size': tile.fontSize+'em'}">{{tile.title}}</span>
+                    <div>
+                        <span id="{{removeSpaces(tile.title)}}-loads-impacted">
+                            {{tile.count | number}}
+                        </span>
+                        {{tile.countLabel}}
+                    </div>
+                </div>
+            </div>
+            <div class="row tile-amount text-center" *ngIf="tile.amount > 0">
+                <span id="{{removeSpaces(tile.title)}}-lost-savings" class="amount">
+                    {{tile.amount | currency : "USD" : "symbol" : "1.0"}}
+                </span>
+                <i class="icon icon-nav-tiles amount fa fa-th-large fa-lg fa-chevron-down"></i>
+                {{tile.amountLabel}}
+            </div>
+            <div *ngIf="tile.amount <= 0" class="row amount text-center" style="color:#ECECFC; background: #ECECFC; border: solid 1px #ccc ">
+                Nothing
+            </div>
+        </div>
+    </div>
